@@ -1,24 +1,107 @@
 .home {
 
+  .header-section {
+  
+    
+    header {
+      width: 100%;
+      height: 500px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 auto;
+     
+      .titlenav {
+        @media @mobile{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-content: center;
+          flex-wrap: nowrap;
+          height: 25%;
+      
+        }
+        height: 25%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        h1 {
+          height: 30%;
+          width: 50%;
+          margin-left: 10%;
+          @media @mobile{
+            margin:0 auto;
+            width: 30%;
+          }
+        }
+       
+        border-bottom: 2px dashed black;
+      }
+      .welcome {
+        width: 100%;
+        height: 70%;
+        @media @mobile{
+          width: 75%;
+          margin: 0 10%;
+        }
+        img {
+          width: 80%;
+          height: 50%;
+          margin-left: 10%;
+          @media @mobile{
+            height: 35%;
+
+          }
+          
+        }
+
+        h2 {
+          margin-top: 2%;;
+        }
+        p {
+          margin-left: 0;
+          border-bottom: 2px dashed black;
+          @media @mobile{
+            font-size: 16px;
+            
+          }
+        }
+        
+      }
+    }
+  }
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
-    
+ @media @mobile {
+  flex-direction: column;
+  margin: 1% auto;
+  width: 75%;
+ }
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile{
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
-
+      @media @mobile {
+        width:100%;
+      }
       img {
         border-radius: 10px;
+        @media @mobile {
+          width: 100%;
+        }
       }
     }
   }
@@ -26,7 +109,11 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
-
+    @media @mobile {
+      flex-direction: column-reverse;
+      margin: 2% auto;
+      width: 75%
+    }
     .text-content {
       padding-left: 1%;
       padding-right: 0;
@@ -52,10 +139,26 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media @mobile {
+      flex-direction: column;
+    }
 
     .destination {
+      @media @mobile {
+        width: 75%;
+        margin: 2% auto;
+      
+      }
       width: 30%;
       margin-bottom: 30px;
+      .btn{
+        .buttons-layout(teal, center, 15px, 15px 8px,#fff, 18px);
+        @media @mobile {
+          width: 50%;
+          margin: 0 auto;
+        }
+      }
     }
   }
-}// home
+  // home
+}
