@@ -1,1 +1,11 @@
 // Mixins in here
+.buttons-layout(@color, @align, @radius, @padding, @textcolor,@font-size){
+    display: flex;
+    justify-content: @align;
+    align-items: center;
+    background-color:@color;
+    border-radius: @radius;
+    padding: @padding;
+    color: @textcolor;
+    font-size: @font-size;
+}
